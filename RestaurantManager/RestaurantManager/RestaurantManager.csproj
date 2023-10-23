@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F0C263A-9A34-468A-9A6E-E52CD28E6C64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RestaurantManager</RootNamespace>
+    <AssemblyName>RestaurantManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\clsBan.cs" />
+    <Compile Include="BUS\clsDangNhap.cs" />
+    <Compile Include="BUS\clsDanhMuc.cs" />
+    <Compile Include="BUS\clsHoaDon.cs" />
+    <Compile Include="BUS\clsKhuVuc.cs" />
+    <Compile Include="BUS\clsLichSu.cs" />
+    <Compile Include="BUS\clsNhanVien.cs" />
+    <Compile Include="BUS\clsThucDon.cs" />
+    <Compile Include="BUS\IBan.cs" />
+    <Compile Include="BUS\IDangNhap.cs" />
+    <Compile Include="BUS\IDanhMuc.cs" />
+    <Compile Include="BUS\IHoaDon.cs" />
+    <Compile Include="BUS\IKhuVuc.cs" />
+    <Compile Include="BUS\ILichSu1.cs" />
+    <Compile Include="BUS\INhanVien.cs" />
+    <Compile Include="BUS\IThucDon.cs" />
+    <Compile Include="BUS\Util.cs" />
+    <Compile Include="DAL\clsConnect.cs" />
+    <Compile Include="DAL\iConnect.cs" />
+    <Compile Include="GUI\fAddFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fAddFood.Designer.cs">
+      <DependentUpon>fAddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fAddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fAddMenu.Designer.cs">
+      <DependentUpon>fAddMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fBackFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fBackFood.Designer.cs">
+      <DependentUpon>fBackFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fConnect.Designer.cs">
+      <DependentUpon>fConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fEmployees.Designer.cs">
+      <DependentUpon>fEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fFood.Designer.cs">
+      <DependentUpon>fFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLoading.Designer.cs">
+      <DependentUpon>fLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fNextTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fNextTable.Designer.cs">
+      <DependentUpon>fNextTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fPay.Designer.cs">
+      <DependentUpon>fPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fPaymenthistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fPaymenthistory.Designer.cs">
+      <DependentUpon>fPaymenthistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fPutTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fPutTable.Designer.cs">
+      <DependentUpon>fPutTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fTable.Designer.cs">
+      <DependentUpon>fTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fUpdate.Designer.cs">
+      <DependentUpon>fUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\fAddFood.resx">
+      <DependentUpon>fAddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fAddMenu.resx">
+      <DependentUpon>fAddMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fBackFood.resx">
+      <DependentUpon>fBackFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fConnect.resx">
+      <DependentUpon>fConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fEmployees.resx">
+      <DependentUpon>fEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fFood.resx">
+      <DependentUpon>fFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLoading.resx">
+      <DependentUpon>fLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fNextTable.resx">
+      <DependentUpon>fNextTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fPay.resx">
+      <DependentUpon>fPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fPaymenthistory.resx">
+      <DependentUpon>fPaymenthistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fPutTable.resx">
+      <DependentUpon>fPutTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fTable.resx">
+      <DependentUpon>fTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fUpdate.resx">
+      <DependentUpon>fUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\cartoon-snail-loading-loading-gif-animation_2734139.png!bw700" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6435.png_860.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-save-icon-design--essential-icon-vector-design-png-image_877651.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thietke-logo-nha-hang-phuong-tay-dep-mat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thanhtoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-contract1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-lock-screen-computer-icons-font-5ae69b6aa629a6.8238226615250625066806.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khoa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-icon-1948x2048-nocsasoq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\them.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2961710.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\okne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql-2012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suachua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huyyy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mokhoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dattruoc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trahang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chuyenban.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goplai.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
